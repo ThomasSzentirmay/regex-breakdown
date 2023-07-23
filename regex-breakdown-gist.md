@@ -33,7 +33,6 @@ Please note that each component description will have a code snippet too, demons
 - `^` : The caret symbol represents the start of a line
 - `$` : The dollar sign represents the end of a line
 
-#### Code Snippet:
 ```javascript
 const regexAnchors = /^https?:\/\/example\.com$/;
 const urlAnchors = 'https://example.com';
@@ -46,7 +45,6 @@ console.log(regexAnchors.test(urlAnchors)); // Output: true
 - `*` : The asterisk indicates that the preceding element can occur zero or more times
 - `+` : The plus sign indicates that the preceding element must occur one or more times
 
-#### Code Snippet:
 ```javascript
 const regexQuantifiers = /^https?:\/\/(www\.)?example\.com\/?$/;
 const urlQuantifiers = 'http://example.com';
@@ -57,7 +55,6 @@ console.log(regexQuantifiers.test(urlQuantifiers)); // Output: true
 
 - `|` : The vertical bar separates two alternatives, matching either the expression on the left or the one on the right
 
-#### Code Snippet:
 ```javascript
 const regexOROperator = /^(https?|ftp):\/\/example\.com$/;
 const urlOROperator = 'ftp://example.com';
@@ -72,7 +69,6 @@ console.log(regexOROperator.test(urlOROperator)); // Output: true
 - `A-Z` : Matches any uppercase letter from 'A-Z'
 - `\.` : Escaped dot matches a literal dot character
 
-#### Code Snippet:
 ```javascript
 const regexCharacterClasses = /^https?:\/\/[\da-zA-Z]+\.[a-z]{2,6}$/;
 const urlCharacterClasses = 'https://www.example.com';
@@ -83,7 +79,6 @@ console.log(regexCharacterClasses.test(urlCharacterClasses)); // Output: true
 
 - None : There are no flags specified at the end of the regular expression
 
-#### Code Snippet:
 ```javascript
 const regexFlags = /^https?:\/\/example\.com$/i;
 const urlFlags = 'HTTP://example.com';
@@ -94,7 +89,6 @@ console.log(regexFlags.test(urlFlags)); // Output: true
 
 - `(...)` : Parentheses define a capturing group. This allows you to extract specific parts of the matched text
 
-#### Code Snippet:
 ```javascript
 const regexGrouping = /^(https?):\/\/(www\.)?(example\.com)$/;
 const urlGrouping = 'https://www.example.com';
@@ -108,7 +102,6 @@ console.log('Domain:', matchGrouping[3]); // Output: "example.com"
 
 - `[...]` : Square brackets define a character class, allowing the regex to match any character inside the brackets
 
-#### Code Snippet:
 ```javascript
 const regexBracketExpressions = /^(https?):\/\/[a-z0-9.-]+\.example\.com$/;
 const urlBracketExpressions = 'https://sub.example.com';
@@ -120,7 +113,6 @@ console.log(regexBracketExpressions.test(urlBracketExpressions)); // Output: tru
 - `*` : The asterisk quantifier is greedy, meaning it will match as much as possible
 - `*?` : Adding a question mark after the quantifier makes it lazy, matching as little as possible
 
-#### Code Snippet:
 ```javascript
 const regexGreedyLazy = /^https?:\/\/([a-z]+\.)*example\.com$/;
 const urlGreedyLazy = 'https://sub.sub.example.com';
@@ -131,7 +123,6 @@ console.log(regexGreedyLazy.test(urlGreedyLazy)); // Output: true
 
 - `\/?` : The escaped forward slash followed by a '?' allows the regex to match URLs with an optional trailing slash
 
-#### Code Snippet:
 ```javascript
 const regexBoundaries = /^https?:\/\/example\.com(\/\w*)*\/?$/;
 const urlBoundaries = 'https://example.com/path/to/resource';
@@ -142,7 +133,6 @@ console.log(regexBoundaries.test(urlBoundaries)); // Output: true
 
 - None : There are no back-references in this regular expression
 
-#### Code Snippet:
 ```javascript
 const regexBackReferences = /^(https?):\/\/\1\.example\.com$/;
 const urlBackReferences = 'https://https.example.com';
@@ -153,7 +143,6 @@ console.log(regexBackReferences.test(urlBackReferences)); // Output: true
 
 - None : There are no look-ahead or look-behind assertions in this regular expression
 
-#### Code Snippet:
 ```javascript
 const regexLookAheadBehind = /^(https?):\/\/(?=www\.)example\.com$/;
 const urlLookAheadBehind = 'https://www.example.com';
